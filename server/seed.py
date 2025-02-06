@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 from random import choice as rc
-
 from faker import Faker
 
 from app import app
@@ -14,11 +13,9 @@ if "Duane" not in usernames:
     usernames.append("Duane")
 
 def make_messages():
-
     Message.query.delete()
     
     messages = []
-
     for i in range(20):
         message = Message(
             body=fake.sentence(),
